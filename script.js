@@ -54,5 +54,46 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Предотвращаем стандартное поведение формы
+    window.location.href = 'thank-you-page.html'; // Переходим на страницу благодарности
+});
+
+
+// document.addEventListener('DOMContentLoaded', function() {
+//     const contactForm = document.getElementById('contactForm');
+//     if (contactForm) {
+//         contactForm.addEventListener('submit', async function(event) {
+//             event.preventDefault();
+//
+//             const formData = new FormData(this);
+//             const data = Object.fromEntries(formData);
+//
+//             try {
+//                 const response = await fetch('mail.php', {
+//                     method: 'POST',
+//                     headers: {
+//                         'Content-Type': 'application/json',
+//                     },
+//                     body: JSON.stringify(data),
+//                 });
+//
+//                 if (response.ok) {
+//                     // Перенаправление на страницу благодарности
+//                     window.location.href = 'thank-you.html';
+//                 } else {
+//                     throw new Error('Ошибка отправки формы.');
+//                 }
+//             } catch (error) {
+//                 const formMessage = document.getElementById('formMessage');
+//                 formMessage.innerHTML = `<p style="color: red;">Произошла ошибка. Пожалуйста, попробуйте позже.</p>`;
+//             }
+//         });
+//     }
+// });
+
+
+
+
 
 
